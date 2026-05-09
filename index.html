@@ -1,69 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Anthology</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Anthology</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=EB+Garamond&display=swap" rel="stylesheet">
 
 <style>
+
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
-    padding: 40px;
+    margin: 0;
+    padding: 0;
+    background: #f4efe6;
+    color: #2f241f;
+    font-family: 'EB Garamond', serif;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.65),
+        rgba(255,255,255,0.65)),
+        url('https://images.unsplash.com/photo-1512820790803-83ca734da794');
+    background-size: cover;
+    background-attachment: fixed;
 }
+
+/* Main Container */
+
+.container {
+    max-width: 850px;
+    margin: 80px auto;
+    background: rgba(250,245,238,0.92);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Header */
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 50px;
+    color: #6b5a50;
+    font-size: 1.2rem;
+}
+
+/* Dropdown */
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
+    width: 300px;
+    margin: 0 auto 60px auto;
 }
 
 .dropbtn {
-    background: #333;
-    color: white;
-    padding: 14px 20px;
+    width: 100%;
+    background: #3d2f2a;
+    color: #f8f3ec;
+    padding: 16px;
     border: none;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
     cursor: pointer;
-    font-size: 16px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.dropbtn:hover {
+    background: #5a4339;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background: white;
-    min-width: 220px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    background: #fffdf9;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    animation: fadeIn 0.4s ease;
+    z-index: 10;
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    color: #2f241f;
+    padding: 14px 18px;
     text-decoration: none;
     display: block;
+    transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
-    background: #f1f1f1;
+    background: #ece2d0;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Intro Text */
+
+.intro {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.15rem;
+    margin-top: 30px;
+}
+
+/* Footer */
+
+.footer {
+    margin-top: 70px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #7b6d66;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width: 768px) {
+
+    .container {
+        margin: 20px;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h1>Digital Anthology</h1>
+<div class="container">
 
-<div class="dropdown">
-    <button class="dropbtn">Choose a Reading</button>
+    <h1>Digital Anthology</h1>
 
-    <div class="dropdown-content">
-        <a href="poem1.html">Poem One</a>
-        <a href="story1.html">Story One</a>
-        <a href="essay1.html">Essay One</a>
+    <p class="subtitle">
+        A curated archive of poetry, stories, essays, and memory.
+    </p>
+
+    <!-- Dropdown Menu -->
+
+    <div class="dropdown">
+
+        <button class="dropbtn">
+            Enter the Collection
+        </button>
+
+        <div class="dropdown-content">
+
+            <a href="poem1.html">Poem One</a>
+
+            <a href="story1.html">Story One</a>
+
+            <a href="essay1.html">Essay One</a>
+
+        </div>
+
     </div>
+
+    <!-- Intro Text -->
+
+    <div class="intro">
+
+        <p>
+            Welcome to the anthology — a digital reading room
+            designed for reflection, imagination, and archival memory.
+        </p>
+
+        <p>
+            Each text exists as part of a growing collection of
+            voices, fragments, and literary experiments.
+        </p>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+        Digital Anthology • Published with GitHub Pages
+    </div>
+
 </div>
 
 </body>
