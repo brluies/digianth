@@ -6,159 +6,191 @@
 
 <title>Digital Anthology</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=EB+Garamond&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body {
     margin: 0;
+    background: #f8f5ef;
+    color: #2d2a26;
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.8;
+}
+
+/* Top Header */
+
+.site-header {
+    border-top: 8px solid #8c1d18;
+    background: white;
+    border-bottom: 1px solid #d8d2c8;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 40px;
+}
+
+.site-title {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.site-subtitle {
+    font-family: 'Source Sans 3', sans-serif;
+    color: #6f675f;
+    margin-top: 10px;
+}
+
+/* Navigation */
+
+nav {
+    background: #efe9de;
+    border-top: 1px solid #d6d0c6;
+    border-bottom: 1px solid #d6d0c6;
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+nav ul {
+    margin: 0;
     padding: 0;
-    background: #f4efe6;
-    color: #2f241f;
-    font-family: 'EB Garamond', serif;
-    background-image:
-        linear-gradient(rgba(255,255,255,0.65),
-        rgba(255,255,255,0.65)),
-        url('https://images.unsplash.com/photo-1512820790803-83ca734da794');
-    background-size: cover;
-    background-attachment: fixed;
+    display: flex;
+    list-style: none;
 }
 
-/* Main Container */
-
-.container {
-    max-width: 850px;
-    margin: 80px auto;
-    background: rgba(250,245,238,0.92);
-    padding: 60px;
-    border-radius: 10px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+nav li {
+    position: relative;
 }
 
-/* Header */
-
-h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
-    text-align: center;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+nav a {
+    display: block;
+    padding: 18px 24px;
+    text-decoration: none;
+    color: #2d2a26;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
 }
 
-.subtitle {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 50px;
-    color: #6b5a50;
-    font-size: 1.2rem;
+nav a:hover {
+    background: #ddd3c1;
 }
 
 /* Dropdown */
 
-.dropdown {
-    position: relative;
-    display: block;
-    width: 300px;
-    margin: 0 auto 60px auto;
-}
-
-.dropbtn {
-    width: 100%;
-    background: #3d2f2a;
-    color: #f8f3ec;
-    padding: 16px;
-    border: none;
-    font-size: 1.1rem;
-    font-family: 'Cormorant Garamond', serif;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-}
-
-.dropbtn:hover {
-    background: #5a4339;
-}
-
 .dropdown-content {
     display: none;
     position: absolute;
-    background: #fffdf9;
-    width: 100%;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    border-radius: 6px;
-    overflow: hidden;
-    animation: fadeIn 0.4s ease;
-    z-index: 10;
+    background: white;
+    min-width: 240px;
+    border: 1px solid #d8d2c8;
+    z-index: 5;
 }
 
 .dropdown-content a {
-    color: #2f241f;
     padding: 14px 18px;
-    text-decoration: none;
-    display: block;
-    transition: background 0.2s ease;
-}
-
-.dropdown-content a:hover {
-    background: #ece2d0;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Intro Text */
+/* Main Layout */
 
-.intro {
-    text-align: center;
-    line-height: 1.8;
-    font-size: 1.15rem;
-    margin-top: 30px;
+.main-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    padding: 0 40px;
+}
+
+/* Main Article */
+
+.feature {
+    background: white;
+    padding: 50px;
+    border: 1px solid #ddd6ca;
+}
+
+.feature h2 {
+    font-size: 2.2rem;
+    margin-top: 0;
+}
+
+.feature p {
+    margin-bottom: 24px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    background: #f1ece4;
+    padding: 40px;
+    border: 1px solid #ddd6ca;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 12px;
+}
+
+.sidebar a {
+    color: #8c1d18;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 
-.footer {
-    margin-top: 70px;
+footer {
+    margin-top: 80px;
+    padding: 40px;
     text-align: center;
-    font-size: 0.95rem;
-    color: #7b6d66;
-}
-
-/* Animation */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background: white;
+    border-top: 1px solid #d8d2c8;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #6f675f;
 }
 
 /* Mobile */
 
-@media(max-width: 768px) {
+@media(max-width: 900px) {
 
-    .container {
-        margin: 20px;
-        padding: 30px;
+    .main-container {
+        grid-template-columns: 1fr;
     }
 
-    h1 {
-        font-size: 2.8rem;
+    nav ul {
+        flex-direction: column;
     }
 
-    .dropdown {
-        width: 100%;
+    .site-title {
+        font-size: 2rem;
     }
+
 }
 
 </style>
@@ -167,57 +199,141 @@ h1 {
 
 <body>
 
-<div class="container">
+<!-- HEADER -->
 
-    <h1>Digital Anthology</h1>
+<header class="site-header">
 
-    <p class="subtitle">
-        A curated archive of poetry, stories, essays, and memory.
-    </p>
+    <div class="header-inner">
 
-    <!-- Dropdown Menu -->
+        <h1 class="site-title">
+            Digital Anthology
+        </h1>
 
-    <div class="dropdown">
-
-        <button class="dropbtn">
-            Enter the Collection
-        </button>
-
-        <div class="dropdown-content">
-
-            <a href="poem1.html">Poem One</a>
-
-            <a href="story1.html">Story One</a>
-
-            <a href="essay1.html">Essay One</a>
-
-        </div>
-
-    </div>
-
-    <!-- Intro Text -->
-
-    <div class="intro">
-
-        <p>
-            Welcome to the anthology — a digital reading room
-            designed for reflection, imagination, and archival memory.
-        </p>
-
-        <p>
-            Each text exists as part of a growing collection of
-            voices, fragments, and literary experiments.
+        <p class="site-subtitle">
+            A scholarly archive of poetry, essays, stories, and textual memory.
         </p>
 
     </div>
 
-    <!-- Footer -->
+</header>
 
-    <div class="footer">
-        Digital Anthology • Published with GitHub Pages
+<!-- NAVIGATION -->
+
+<nav>
+
+<div class="nav-inner">
+
+<ul>
+
+<li>
+    <a href="index.html">Home</a>
+</li>
+
+<li class="dropdown">
+
+    <a href="#">Readings</a>
+
+    <div class="dropdown-content">
+
+        <a href="poem1.html">Poem One</a>
+
+        <a href="story1.html">Story One</a>
+
+        <a href="essay1.html">Essay One</a>
+
     </div>
+
+</li>
+
+<li>
+    <a href="#">About</a>
+</li>
+
+<li>
+    <a href="#">Archive</a>
+</li>
+
+</ul>
 
 </div>
+
+</nav>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-container">
+
+    <!-- Main Feature -->
+
+    <section class="feature">
+
+        <h2>
+            Welcome to the Anthology
+        </h2>
+
+        <p>
+            This digital anthology preserves literary works,
+            archival fragments, and critical reflections
+            within a searchable online environment inspired
+            by scholarly humanities collections.
+        </p>
+
+        <p>
+            The project emphasizes slow reading,
+            textual interpretation, and digital preservation.
+        </p>
+
+        <p>
+            Readers may browse poems, essays,
+            and stories through the archive navigation above.
+        </p>
+
+    </section>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h3>Featured Texts</h3>
+
+        <ul>
+
+            <li>
+                <a href="poem1.html">Poem One</a>
+            </li>
+
+            <li>
+                <a href="story1.html">Story One</a>
+            </li>
+
+            <li>
+                <a href="essay1.html">Essay One</a>
+            </li>
+
+        </ul>
+
+        <h3>Collections</h3>
+
+        <ul>
+
+            <li>Poetry</li>
+            <li>Stories</li>
+            <li>Essays</li>
+            <li>Archives</li>
+
+        </ul>
+
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+Digital Anthology • Published with GitHub Pages
+
+</footer>
 
 </body>
 </html>
